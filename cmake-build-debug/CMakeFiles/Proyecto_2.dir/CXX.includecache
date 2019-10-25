@@ -1,0 +1,54 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/macarena/Documents/Cursos de carrera/POO 2/Proyecto_2/container.cpp
+container.hpp
+/Users/macarena/Documents/Cursos de carrera/POO 2/Proyecto_2/container.hpp
+
+/Users/macarena/Documents/Cursos de carrera/POO 2/Proyecto_2/container.hpp
+string
+-
+iostream
+-
+iterator
+-
+vector
+-
+forward_list
+-
+fstream
+-
+sstream
+-
+map.h
+/Users/macarena/Documents/Cursos de carrera/POO 2/Proyecto_2/map.h
+deserializador.h
+/Users/macarena/Documents/Cursos de carrera/POO 2/Proyecto_2/deserializador.h
+
+/Users/macarena/Documents/Cursos de carrera/POO 2/Proyecto_2/deserializador.h
+
+/Users/macarena/Documents/Cursos de carrera/POO 2/Proyecto_2/main.cpp
+iostream
+-
+fstream
+-
+container.cpp
+/Users/macarena/Documents/Cursos de carrera/POO 2/Proyecto_2/container.cpp
+list
+-
+sstream
+-
+vector
+-
+string
+-
+
+/Users/macarena/Documents/Cursos de carrera/POO 2/Proyecto_2/map.h
+string
+-
+

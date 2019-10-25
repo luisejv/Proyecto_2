@@ -2,26 +2,60 @@
 #define PROYECTO_2_CONTAINER_HPP
 
 #include <string>
+#include <iostream>
+#include <iterator>
+#include <vector>
+#include<forward_list>
+#include <fstream>
+#include <sstream>
 
-using std::string;
+using namespace std;
+
+#include "map.h"
+#include "deserializador.h"
+
+
 
 class Container {
-private:
-    string country;
-    int year;
-    int commCode;
-    string commodity;
-    string flow;
-    long trade;
-    long weight;
-    string qttyName;
-    long qtty;
-    string categ;
+protected:
+    vector <Map*> *elements;
+    //cambiar a generico
+    DeserializadorMap deserializador;
 public:
-    Container(const string &country, int year, int commCode, const string &commodity, const string &flow, long trade,
-              long weight, const string &qttyName, long qtty, const string &categ);
-    //virtual void ordenar(string atributo) = 0;
+    Container(string nombreArhivo){
+        elements = new vector<Map*>();
+        fstream* archivo = new fstream(nombreArhivo, ios_base::in);
+        string linea;
+        if (!archivo->is_open()){
+            cout << "Archivo fallo en leer"<< std::endl;
+        }
+        else{
+            getline(*archivo,linea); //Para la cabecera
+            while (getline(*archivo,linea)){
+                    Map* element = deserializador.deserializar(linea, ',');
+                    elements->push_back(element);
+                    //corregir para poder usar template T generico para vector, list, etc
+            }
+            archivo->close();
+        }
+        delete archivo;
+    }
+    virtual void ordenar(string atributo) = 0;
 };
+
+
+class ContainerOrdenamientoA : public Container {
+public:
+    void ordenar(string atributo) override{
+
+    };
+
+    ContainerOrdenamientoA(const string &nombreArhivo) : Container(nombreArhivo) {}
+};
+
+
+
+
 
 
 #endif //PROYECTO_2_CONTAINER_HPP
