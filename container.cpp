@@ -4,10 +4,10 @@
 
 #include "container.hpp"
 
-Container::Container(const string &country, int year, int commCode, const string &commodity, Flow flow, long trade,
-                     long weight, const string &qName, long qtty, const string &categ) : country(country), year(year),
-                                                                                         commCode(commCode),
-                                                                                         commodity(commodity),
-                                                                                         flow(flow), trade(trade),
-                                                                                         weight(weight), q_name(qName),
-                                                                                         qtty(qtty), categ(categ) {}
+Container::Container(const string &country, int year, int commCode, const string &commodity, const string &flow,
+                     long trade, long weight, const string &qttyName, long qtty, const string &categ) : country(
+        country), year(year), commCode(commCode), commodity(commodity), flow(flow), trade(trade), weight(weight),
+                                                                                                        qttyName(
+                                                                                                                qttyName),
+                                                                                                        qtty(qtty),
+                                                                                                        categ(categ) {}

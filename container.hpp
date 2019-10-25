@@ -5,22 +5,22 @@
 
 using std::string;
 
-enum Flow {Import, Export};
 class Container {
 private:
     string country;
     int year;
     int commCode;
     string commodity;
-    Flow flow;
+    string flow;
     long trade;
     long weight;
-    string q_name;
+    string qttyName;
     long qtty;
     string categ;
 public:
-    Container(const string &country, int year, int commCode, const string &commodity, Flow flow, long trade,
-              long weight, const string &qName, long qtty, const string &categ);
+    Container(const string &country, int year, int commCode, const string &commodity, const string &flow, long trade,
+              long weight, const string &qttyName, long qtty, const string &categ);
+    //virtual void ordenar(string atributo) = 0;
 };
 
 
