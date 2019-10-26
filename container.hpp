@@ -5,7 +5,6 @@
 #include <iostream>
 #include <iterator>
 #include <vector>
-#include<forward_list>
 #include <fstream>
 #include <sstream>
 
@@ -13,18 +12,18 @@ using namespace std;
 
 #include "map.h"
 #include "deserializador.h"
-
+#include "Sorter.hpp"
 
 
 class Container {
-protected:
-    vector <Map*> *elements;
+private:
+    vector <Map*>* elements;
     //cambiar a generico
     DeserializadorMap deserializador;
 public:
-    Container(string nombreArhivo){
+    explicit Container(const string& nombreArhivo){
         elements = new vector<Map*>();
-        fstream* archivo = new fstream(nombreArhivo, ios_base::in);
+        auto* archivo = new fstream(nombreArhivo, ios_base::in);
         string linea;
         if (!archivo->is_open()){
             cout << "Archivo fallo en leer"<< std::endl;
@@ -39,7 +38,7 @@ public:
         }
         delete archivo;
     }
-    void pruebas (){
+    void pruebas(){
         for (Map *element: *elements)
         {
             cout<<element->getCountry_or_area()<<","<<element->getYear()<<","
@@ -49,21 +48,16 @@ public:
                 <<element->getQuantity()<<","<<element->getCategory()<<endl;
         }
     }
-    virtual void ordenar(string atributo) = 0;
+    vector<Map*>* getElements(){
+        return elements;
+    }
+    ~Container(){
+        for (auto it : *elements){
+            delete it;
+        }
+        delete elements;
+    }
 };
-
-
-class ContainerOrdenamientoA : public Container {
-public:
-    void ordenar(string atributo) override{
-
-    };
-
-    ContainerOrdenamientoA(const string &nombreArhivo) : Container(nombreArhivo) {}
-};
-
-
-
 
 
 

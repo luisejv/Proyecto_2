@@ -3,4 +3,4 @@ project(Proyecto_2)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Proyecto_2 main.cpp container.cpp container.hpp map.h)
+add_executable(Proyecto_2 main.cpp container.cpp container.hpp map.h Sorter.hpp Merge.hpp Quick.hpp Heap.hpp Shell.hpp)
