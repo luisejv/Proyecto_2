@@ -6,7 +6,6 @@ CMakeFiles/Proyecto_2.dir/container.cpp.o: ../container.hpp
 CMakeFiles/Proyecto_2.dir/container.cpp.o: ../deserializador.h
 CMakeFiles/Proyecto_2.dir/container.cpp.o: ../map.h
 
-CMakeFiles/Proyecto_2.dir/main.cpp.o: ../container.cpp
 CMakeFiles/Proyecto_2.dir/main.cpp.o: ../container.hpp
 CMakeFiles/Proyecto_2.dir/main.cpp.o: ../deserializador.h
 CMakeFiles/Proyecto_2.dir/main.cpp.o: ../main.cpp

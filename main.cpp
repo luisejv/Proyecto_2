@@ -1,14 +1,15 @@
 #include <iostream>
 #include <fstream>
-#include "container.cpp"
+#include "container.hpp"
 #include <list>
 #include <sstream>
 #include <vector>
 #include <string>
 
+
 using std::ios, std::cout, std::list, std::stringstream, std::vector;
 
-void merge(list<int> datos, int first, int middle, int size){
+/*void merge(list<int> datos, int first, int middle, int size){
     int L[middle - first + 1];
     int R[size - middle];
     auto it = datos.begin();
@@ -19,8 +20,9 @@ void merge(list<int> datos, int first, int middle, int size){
 
     }
 
-}
+}*/
 
+/*
 void mergeSort(list<int> datos, int first, int size){
     if (size > first) {
         int middle = (first+size-1)/2;
@@ -29,9 +31,11 @@ void mergeSort(list<int> datos, int first, int size){
         merge(datos, first, middle, size);
     };
 }
+*/
 
 int main() {
-
+    Container * cont = new ContainerOrdenamientoA("abc.csv");
+    cont->pruebas();
     return 0;
 }
 

@@ -34,11 +34,20 @@ public:
             while (getline(*archivo,linea)){
                     Map* element = deserializador.deserializar(linea, ',');
                     elements->push_back(element);
-                    //corregir para poder usar template T generico para vector, list, etc
             }
             archivo->close();
         }
         delete archivo;
+    }
+    void pruebas (){
+        for (Map *element: *elements)
+        {
+            cout<<element->getCountry_or_area()<<","<<element->getYear()<<","
+                <<element->getComm_code()<<","<<element->getCommodity()<<","
+                <<element->getFlow()<<","<<element->getTrade_usd()<<","
+                <<element->getWeight_kg()<<","<<element->getQuantity_name()<<","
+                <<element->getQuantity()<<","<<element->getCategory()<<endl;
+        }
     }
     virtual void ordenar(string atributo) = 0;
 };

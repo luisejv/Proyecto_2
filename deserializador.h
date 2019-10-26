@@ -24,7 +24,7 @@ public:
             else
                 campos.push_back(campo);
         }
-        if (campos.size() == 9){
+        if (campos.size() == 10){
             string country_or_area = campos[0];
             int year = stoi(campos[1]);
             unsigned long int comm_code = stoi(campos[2]);

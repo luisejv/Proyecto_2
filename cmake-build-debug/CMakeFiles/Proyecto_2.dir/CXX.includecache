@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/macarena/Documents/Cursos de carrera/POO 2/Proyecto_2/container.cpp
-container.hpp
-/Users/macarena/Documents/Cursos de carrera/POO 2/Proyecto_2/container.hpp
-
 /Users/macarena/Documents/Cursos de carrera/POO 2/Proyecto_2/container.hpp
 string
 -
@@ -37,8 +33,8 @@ iostream
 -
 fstream
 -
-container.cpp
-/Users/macarena/Documents/Cursos de carrera/POO 2/Proyecto_2/container.cpp
+container.hpp
+/Users/macarena/Documents/Cursos de carrera/POO 2/Proyecto_2/container.hpp
 list
 -
 sstream

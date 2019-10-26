@@ -38,7 +38,46 @@ public:
         this->quantity = quantity;
         this->category = category;
     }
-    //setters para el ordenamiento
+
+    const string &getCountry_or_area() const {
+        return country_or_area;
+    }
+
+    int getYear() const {
+        return year;
+    }
+
+    unsigned long getComm_code() const {
+        return comm_code;
+    }
+
+    const string &getCommodity() const {
+        return commodity;
+    }
+
+    const string &getFlow() const {
+        return flow;
+    }
+
+    unsigned long getTrade_usd() const {
+        return trade_usd;
+    }
+
+    unsigned long getWeight_kg() const {
+        return weight_kg;
+    }
+
+    const string &getQuantity_name() const {
+        return quantity_name;
+    }
+
+    unsigned long getQuantity() const {
+        return quantity;
+    }
+
+    const string &getCategory() const {
+        return category;
+    }
 };
 
 
